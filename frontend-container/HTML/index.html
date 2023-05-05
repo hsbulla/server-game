@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-widht, initial-scale=1.0">
+    <link type = "text/css" rel="stylesheet" href="../CSS/style.css">
+    <link rel="manifest" href="../WebAppManifest/manifest.webmanifest">
+    <title>Harry Poter</title>
+</head>
+<body>
+        <canvas id="render-canvas"></canvas>
+        <div id="user-interface">
+            <img id="coin-img" class="a-pos" src="../img/coin.png" alt="#">
+            <p id="coin-score" class="a-pos">0</p>
+            <p id="nickname" class="a-pos">{{ nickname }}</p>
+            <div id="play-screen">
+                <p id="score" class="a-pos">0</p>
+            </div>
+            <div id="game-over-screen">
+                <p id="game-over-info" class="game-over-p">GAME OVER</p>
+                <p id="best-score" class="game-over-p">Best: 0</p>
+                <p id="now-score" class="game-over-p">NOW: 0</p>
+                <p id="tap-info" class="game-over-p">Press any key to restart</p>
+            </div>
+        </div>
+        <script>
+
+            var pathToJSON_api = '../JSON/api-container.json';
+            fetch(pathToJSON_api)
+                .then(response => response.json())
+                .then(data => {
+                    var platform_code = data.platform
+                    var background_code = data.background
+                    var obstacle_code = data.obstacle
+
+                    if (platform_code == "platform_1"){
+                        pathToImage_platform = '../img/platform/platform_1.png';
+                    }
+                    if (platform_code == "platform_2"){
+                        pathToImage_platform = '../img/platform/platform_2.png';
+                    }
+                    if (platform_code == "platform_3"){
+                        pathToImage_platform = '../img/platform/platform_3.png';
+                    }
+                    if (obstacle_code == "obstacle_1"){
+                        pathToImage_obstacle = '../img/obstacle/obstacle_1.jpg';
+                    }
+                    if (obstacle_code == "obstacle_2"){
+                        pathToImage_obstacle = '../img/obstacle/obstacle_2.jpg';
+                    }
+                    if (obstacle_code == "obstacle_3"){
+                        pathToImage_obstacle = '../img/obstacle/obstacle_1.jpg';
+                    }
+                    if (background_code == "background_1"){
+                        pathToImage_background = '../img/background/background_1/background_1';
+                    }
+                    if (background_code == "background_2"){
+                        pathToImage_background = '../img/background/background_2/background_2';
+                    }
+                    if (background_code == "background_3"){
+                        pathToImage_background = '../img/background/background_1/background_1';
+                    }
+                })
+            var pathToImage_garry = '../img/garg.png';
+            var pathToImage_coin = '../img/coin/';
+        </script>
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/cannon.js"></script>
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.js"></script>
+    <script src="../JS/script.js"></script>
+</body>
+</html>

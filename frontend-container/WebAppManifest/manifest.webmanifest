@@ -1,0 +1,13 @@
+{
+    "name": "Garry Potter",
+    "start_url": "index.html",
+    "display": "fullscreen",
+    "orientation": "portait",
+    "icons": [
+        {
+            "scr": "../image/Garry.png",
+            "sizes": "320x400",
+            "type": "image/png"
+        }
+    ]
+}

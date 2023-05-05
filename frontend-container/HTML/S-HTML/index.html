@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+    {% load static %}
+	<link rel="stylesheet" href="{% static "CSS/style.css" %}" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-widht, initial-scale=1.0">
+    <title>Harry Poter</title>
+</head>
+<body>
+        <canvas id="render-canvas"></canvas>
+        <div id="user-interface">
+            <img id="coin-img" class="a-pos" src={% static "img/coin.png" %} alt="#">
+            <p id="coin-score" class="a-pos">0</p>
+            <p id="nickname" class="a-pos">{{ nickname }}</p>
+            <div id="nav-bar" class="a-pos">
+                <img id="shop-icon" src={% static "img/shop/shop-icon.png" %}>
+                <img id="back-icon" src={% static "img/shop/back-icon.png" %}>
+            </div>
+            <div id="play-screen">
+                <p id="score" class="a-pos">0</p>
+            </div>
+            <div id="game-over-screen">
+                <p id="game-over-info" class="game-over-p">GAME OVER</p>
+                <p id="best-score" class="game-over-p">Best: 0</p>
+                <p id="now-score" class="game-over-p">NOW: 0</p>
+                <p id="tap-info" class="game-over-p">Press any key to restart</p>
+            </div>
+            <div id="shop-screen">
+                <img id="left-arrow" onclick="arrowClick(-1)" src={% static "img/shop/left-arrow.png" %}>
+                <img id="right-arrow" onclick="arrowClick(1)" src={% static "img/shop/right-arrow.png" %}>
+                <div id="price-block">
+                    <img id="lock-icon" src={% static "img/shop/lock-icon.png" %}>
+
+                    <div class="price-block-price">
+                        <span id="price">0</span>
+                        <img id="price-coin-img" src={% static "img/coin.png" %} alt="#">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var pathToImage_platform = '{% static static_platform %}';
+            var pathToImage_background = '{% static static_background %}';
+            var pathToImage_obstacle = '{% static static_obstacle %}';
+            var pathToImage_garry = '{% static "img/ball1.jpg" %}';
+            var pathToImage_coin = '{% static "img/coin/" %}';
+            var x = '{% static "img/shop/ball" %}';
+        </script>
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/cannon.js"></script>
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.js"></script>
+    <script src="{% static "JS/script.js" %}"></script>
+</body>
+</html>

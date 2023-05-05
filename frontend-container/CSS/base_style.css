@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: #1d1d1d;
+	background: #c7b39b url(../img/base_img/backgroundbase.jpg);
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	font-family: 'Black Ops One', cursive;
+}
+
+header {
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	position: relative;
+}
+header img {
+	width: 500px;
+	height: 120px;
+	border-radius: 50
+}
+
+.logo-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 20px;
+}
+
+main {
+	margin: 50px auto;
+	max-width: 800px;
+	padding: 20px;
+	background-color: #333;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	border-radius: 5px;
+}
+
+.scoreboard {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 50px auto;
+	max-width: 800px;
+	padding: 20px;
+	background-color: #333;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	border-radius: 5px;
+}
+
+.scoreboard p{
+
+	height: 40px;
+	font-size: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.scoreboard img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50
+}
+.column {
+	flex-basis: 30%;
+}
+
+.input-container {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+h2 {
+	font-size: 2rem;
+	margin-bottom: 10px;
+	text-align: center;
+	font-size: 1.5rem;
+	margin-bottom: 10px;
+}
+
+.input-container form{
+	width: 400px;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+input {
+	padding: 10px;
+	font-size: 1.2rem;
+	border-radius: 5px;
+	border: none;
+	background-color: #fff;
+	outline: none;
+	margin-bottom: 10px;
+	width: 100%;
+	max-width: 400px;
+}
+
+button {
+	font-family: 'Black Ops One', cursive;
+	background-color: #ed1c24;
+	color: #fff;
+	padding: 10px 20px;
+	font-size: 1.2rem;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 10px;
+	transition: background-color 0.2s ease;
+}
+
+button:hover {
+	background-color: #c4171e;
+}
+

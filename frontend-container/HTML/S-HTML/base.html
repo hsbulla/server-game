@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+	{% load static %}
+	<link rel="stylesheet" href="{% static "CSS/base_style.css" %}" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-widht, initial-scale=1.0">
+    <title>Harry Poter</title>
+</head>
+<body>
+	<header>
+		<div class="logo-container">
+		</div>
+		<a href="https://github.com/hsbulla/js_game/tree/master"><img src={% static "img/base_img/logobase.png" %} alt=""></a>
+	</header>
+	<div class="scoreboard">
+		<main>
+			<p><img src={% static "img/base_img/absolute_champion.png" %} alt="Avatar 1"></p>
+			<h2>ABSOLUTE CHAMPIONS</h2>
+		</main>
+		<div class="column">
+			<p><img src={% static "img/base_img/1_place.png" %} alt="Avatar 1"></p>
+			<p><img src={% static "img/base_img/2_place.png" %} alt="Avatar 2"></p>
+			<p><img src={% static "img/base_img/3_place.png" %} alt="Avatar 3"></p>
+		</div>
+		<div class="column">
+			<p>{{ player_1 }}</p>
+			<p>{{ player_2 }}</p>
+			<p>{{ player_3 }}</p>
+		</div>
+		<div class="column">
+			<p>{{ score_1 }}</p>
+			<p>{{ score_2 }}</p>
+			<p>{{ score_3 }}</p>
+		</div>
+	</div>
+    <main>
+        <div class="input-container">
+            <h2>Enter your nickname:</h2>
+			<form method="post" action="play">
+				{% csrf_token %}
+				<input type="text" id="nickname" name="nickname" />
+				<button type="submit">Get to the game</button>
+			</form>
+        </div>
+    </main>
+</body>
+</html>

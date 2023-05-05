@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+body,
+#render-canvas,
+#user-interface {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Black Ops One', cursive;
+    color: aliceblue;
+    -webkit-user-select:none;
+     user-select: none;
+}
+/* PLAY SCREEN */
+.a-pos {
+    position: absolute;
+}
+
+#coin-img {
+    top: 2vh;
+    right: 2vh;
+    width: 6vh;
+}
+
+#coin-score {
+    top: -6vh;
+    right: 10vh;
+    font-size: 7vh;
+}
+#nickname{
+    top: 5vh;
+    right: 2vh;
+    font-size: 4vh;
+}
+
+#score {
+    top: -6vh;
+    right: 49%;
+    font-size: 7vh;
+}
+/* GAME OVER SCREEN */
+#game-over-screen {
+    display: none;
+}
+
+.game-over-p{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+#game-over-info{
+    top: 10vh;
+    font-size: 7vh;   
+}
+#best-score{
+    top: 30vh;
+    font-size: 6vh;
+}
+#now-score{
+    top: 40vh;
+    font-size: 6vh;
+}
+#tap-info{
+    top: 70vh;
+    font-size: 4vh;
+    animation-name: tap-info-anim;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+/* shop screen */
+
+#nav-bar, #shop-icon, #back-icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#shop-icon, #back-icon{
+    width: 6vh;
+    padding: 1vh;
+    display: none;
+}
+#shop-screen{
+    display: none;
+}
+#left-arrow, #right-arrow{
+    position: absolute;
+    top: 70vh;
+    width: 10vh;
+}
+#left-arrow{
+    left: 0;
+}
+#right-arrow{
+    right: 0;
+}
+#price-block{
+    display: flex;
+    position: absolute;
+    top: 70vh;
+    left: 0;
+    width: 40%;
+    font-size: 7vh;
+    text-align: center;
+    margin-left: 30%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+#lock-icon{
+    position: relative;
+    width: 15vh;
+    padding-bottom: 3vh;
+}
+#price-coin-img{
+    position: relative;
+    bottom: 0;
+    right: 0;
+    width: 5vh;
+}
+
+
+
+
+
+
+
+
+
+
+/* Анимации */
+@keyframes tap-info-anim {
+    from{
+        font-size: 4vh;
+        top: 70vh;
+        opacity: 0;
+    }
+    to{
+        font-size: 4vh;
+        top: 70vh;
+        opacity: 0;
+    }
+    50%{
+        font-size: 4.5vh;
+        top: 69.5vh;
+        opacity: 1;
+    }
+    
+}
